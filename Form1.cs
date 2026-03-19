@@ -13,18 +13,23 @@ namespace EchoMessenger
 
         private void btnSending_Click(object sender, EventArgs e)
         {
+            string input = txtTyppingbox.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(txtTyppingbox.Text))
+            if (string.IsNullOrWhiteSpace(input))
             {
                 return;
             }
 
-            string typed_msg;
-            typed_msg = txtTyppingbox.Text;
+            string currentTime = DateTime.Now.ToString("tt h:mm");
 
-            lstChatlist.Items.Add(typed_msg);
+            string finalMsg = $"{input}  ({currentTime})";
+
+            lstChatlist.Items.Add(finalMsg);
+
+            this.Text = $"EchoMessenger - 메시지 개수: {lstChatlist.Items.Count}개";
 
             txtTyppingbox.Clear();
+            txtTyppingbox.Focus();
         }
 
         private void txtTyppingbox_KeyDown_1(object sender, KeyEventArgs e)
