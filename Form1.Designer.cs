@@ -32,6 +32,8 @@
             txtTyppingbox = new TextBox();
             btnSending = new Button();
             lstChatlist = new ListBox();
+            btnClear = new Button();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -71,11 +73,33 @@
             lstChatlist.Size = new Size(720, 289);
             lstChatlist.TabIndex = 4;
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(607, 27);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(146, 40);
+            btnClear.TabIndex = 5;
+            btnClear.Text = "대화기록 삭제";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(472, 27);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(129, 40);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "메세지 삭제";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDelete);
+            Controls.Add(btnClear);
             Controls.Add(lstChatlist);
             Controls.Add(btnSending);
             Controls.Add(txtTyppingbox);
@@ -92,5 +116,7 @@
         private TextBox txtTyppingbox;
         private Button btnSending;
         private ListBox lstChatlist;
+        private Button btnClear;
+        private Button btnDelete;
     }
 }
