@@ -51,6 +51,7 @@
             txtTyppingbox.Name = "txtTyppingbox";
             txtTyppingbox.Size = new Size(620, 50);
             txtTyppingbox.TabIndex = 2;
+            txtTyppingbox.KeyDown += txtTyppingbox_KeyDown_1;
             // 
             // btnSending
             // 
